@@ -18,7 +18,17 @@ function App() {
     <div id="app">
       <h1>PNV Team !!</h1>
       <p>Here are some PNV trainers and educators, do you know them?</p>
-      <User /> {/* How to loop on ALL_PNV_TEACHERS list ? */}
+      <Teachers teachers={ALL_PNV_TEACHERS}/>
+    </div>
+  );
+}
+
+function Teachers({teachers}){
+  return (
+    <div id="teachers" data-testid="teachers">
+      {teachers.map((teacher, index) => (
+        <User key={index} user={teacher} />
+        ))}
     </div>
   );
 }

@@ -10,8 +10,8 @@ export const userData = {
 export function User() {
   return (
     <div id="user" data-testid="user">
-      <h2>{ userData.firstName}</h2>
-      <p>{ userData.lastName}</p>
+      <h2>{ userData.firstName} {userData.lastName}</h2>
+      <p>{ userData. title}</p>
     </div>
   );
 }
